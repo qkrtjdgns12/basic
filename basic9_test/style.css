@@ -1,0 +1,113 @@
+*{margin: 0; padding: 0;}
+
+.약::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.wrap{padding: 100px;
+}
+
+.a{
+    background-color: beige;
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.a .b .b자식{}
+
+
+.a .b .일등{
+    width: 21.25%;
+    background-color: green;
+    float: left;
+    height: 200px;
+    margin-right: 5%;
+}
+.a .b .이등{
+    width: 21.25%;
+    background-color: green;
+    float: left;
+    height: 200px;
+    margin-right: 5%;
+}
+.a .b .삼등{
+    width: 21.25%;
+    background-color: green;
+    float: left;
+    height: 200px;
+    margin-right: 5%;
+}
+.a .b .사등{
+    width: 21.25%;
+    background-color: green;
+    float: left;
+    height: 200px;
+}
+
+.d{
+    background-color: brown;
+    width: 900px;
+    margin: 50px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.d .g{}
+
+.d .g .하나{
+    width: 21.25%;
+    background-color: green;
+    float: left;
+    height: 200px;
+    margin-right: 5%;
+}
+.d .g .둘{
+    width: 21.25%;
+    background-color: green;
+    float: left;
+    height: 200px;
+    margin-right: 5%;
+}
+.d .g .셋{
+    width: 21.25%;
+    background-color: green;
+    float: left;
+    height: 200px;
+    margin-right: 5%;
+}
+.d .g .넷{
+    width: 21.25%;
+    background-color: green;
+    float: left;
+    height: 200px;
+}
+
+.q{
+    background-color: greenyellow;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.w{}
+
+.w .e .일{
+    width: 75%;
+background-color: green;
+height: 200px;
+float: left;
+margin-right: 5%;
+}
+
+.w .e .둘{
+    width: 20%;
+background-color: green;
+height: 200px;
+float: left;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container clearfix">
+            <h1>
+                <a href="#">
+                    <img src="images/header_logo.png" alt="존예로고">
+                </a>
+            </h1>
+            <div class="gnb">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">OUTWEAR</a>
+                        <ul class="submenu">
+                            <li><a href="https://www.naver.com/">가디건</a></li>
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">점퍼</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">TOP</a>
+                        <ul class="submenu">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">티셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">BOTTOM</a>
+                        <ul class="submenu">
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">SHOES</a>
+                        <ul class="submenu">
+                            <li><a href="#">샌달</a></li>
+                            <li><a href="#">플랫슈즈</a></li>
+                            <li><a href="#">로퍼</a></li>
+                            <li><a href="#">워커/부츠</a></li>
+                        </ul>
+                    </li>
+                    <!-- ul>li*4>a -->
+                </ul>
+            </div>
+        </div>
+    </div> <!-- end header -->
+
+    <div class="main">
+        <div class="container">
+            <h2>메인</h2>
+        </div>
+    </div> <!-- end main -->
+
+    <div class="tab container">
+        <ul class="btn clearfix">
+            <li class="first active"><a href="#">best item</a></li>
+            <li><a href="#">new arrivals</a></li>
+        </ul>
+
+    </div><!-- end tab -->
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+<!-- li 태그
+li 태그는 반드시 ul, ol 태그로 감싸있어야한다(부모-ul,ol)
+ul,ol태그의 자식은 li 뿐이다. 다른 태그를 자식으로 사용하면 안된다
+다른 태그를 사용할때는 
+li의 자손으로 사용하여야 한다. -->
+
+<!-- block요소안에는 block나 inline요소가 포함된다.
+inline요소안에는 block요소를 포함하면 안된다.
+ex) block요소 - 코끼리 , inline요소 - 뱀
+
+-->
