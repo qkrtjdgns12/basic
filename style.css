@@ -107,9 +107,25 @@ li {
 
 /* end header */
 
+/* 부모가 float에 의해 영역이 깨지지 않는 경우
+1- 자식이 float일때 그 부모도 float이 있다면 그 부모는 안깨짐
+2- 자식이 float일때 그 부모가 positon absolute, fixed라면 그 부모는 안깨짐 */
+/* main */
 .main{
+    position: relative;
     height: 300px; background-color: rgb(9, 226, 241);
 }
+
+.main ul{position: absolute; width: 3600px;
+    top: 0; left: 0;
+}
+.main ul li{float: left;}
+.main ul li a{}
+.main ul li a img{}
+
+
+
+
 
 /* tab */
 .tab{height: 350px; padding-top: 10px;}
@@ -163,12 +179,37 @@ font-size: 12px; box-sizing: border-box;
     box-sizing: border-box;
 }
 .contents>div.notice ul{}
-.contents>div.notice ul li{line-height: 30px; 
-    overflow: hidden;}/*  float로 인해 깨지 방지 height:30px;으로 처리해도 됨 */
+.contents>div.notice ul li{
+    position: relative;
+    line-height: 30px; 
+    overflow: hidden;
+    padding-left: 7px;
+}/*  float로 인해 깨지 방지 height:30px;으로 처리해도 됨 */
+/* 글자나 이미지가 특수문자와 겹쳤을때 혹은(before)떄에는 글자 위치가 움직여야한다 (padding-left로) */
+.contents>div.notice ul li::before{
+        content: ""; width: 3px; height: 3px;
+        background-color: #333;
+        position: absolute;
+        top: 12px; left: 0;
+    }
 .contents>div.notice ul li a{float: left; display: block;}
 .contents>div.notice ul li .date{float: right; display: block;}
 
 
-.contents>div.banner{}
-.contents>div.now{}
+.contents>div.banner{padding: 5px 20px 0;}
+.contents>div.now{padding: 5px 20px 0;}
 
+/* footer */
+.footer{background-color: #333; color: #fff;}
+.footer a{color: #fff;}
+
+.footer h2{width: 400px; float: left; height: 100px;
+    padding-top: 30px; box-sizing: border-box;
+}
+.footer p{float: left; text-align: center; width: 400px;
+height: 100px; line-height: 100px;
+}
+.footer .snsnav{float: right;height: 100px;}
+.footer .snsnav ul{}
+.footer .snsnav li{float: left; margin: 0 10px;}
+.footer .snsnav li a{line-height: 100px;}

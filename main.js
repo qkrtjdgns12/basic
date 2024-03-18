@@ -51,3 +51,25 @@ $('.btn li').click(function(){
 
 })
 
+
+let num = 1;
+
+//
+//setInterval(어떤일,3000)//3초마다 어떤일이 실행
+//setInterval(function(){},3000)//3초마다 어떤일이 실행
+
+//if(조건문){조건문이 참일때 실행되는 실행문}
+
+//if(조건문){
+
+//}eles{
+//   조건문이 거짓일때 실행되는 실행문
+//}
+setInterval(function(){
+    if(num<3){
+        num++; //1씩증가
+        }else{
+            num=1;
+        }
+    console.log(num)
+},1000)
