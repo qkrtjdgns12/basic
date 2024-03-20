@@ -1,0 +1,62 @@
+* {   margin: 0; padding: 0; color: #333; font-size: 14px;}
+
+body{font-family: "Noto Sans KR", sans-serif;}
+
+li{list-style: none;} /* 기호제거 */
+a{text-decoration: none;} /* a태그에 나타나는 밑줄제거 */
+img{width: 100%;}
+/* 인라인요소는 공간에 대한 개념이 없음
+단, img태그와 button태그는 공간을 인식함 */
+
+.clearfix::after{content: ""; clear: both; display: block;}
+
+.container{width: 1200px; margin: 0 auto;}
+
+/* header */
+.header{}
+.header h1{width: 200px; height: 100px;
+float: left;
+}
+
+.header .gnb{float: right;}
+
+.header .gnb ul{}
+
+.header .gnb ul li{float: left; width: 150px; height: 100px;
+text-align: center; line-height: 100px;
+}
+
+.header .gnb ul li a.mainnav{display: block;
+font-size: 18px; font-weight: bold; color: #333;
+/* transition: 0.3s; 1s = 1000ms 0.3s = 300ms */
+transition: 200ms;
+/* background-color: rgba(0,0,0,0.4);
+background-color: rgba(0,0,0,.4); */
+}
+
+.header .gnb ul li:hover a.mainnav{
+    color: #0b7245; border-bottom: 3px solid #0b7245;
+}
+
+.header .gnb .subnav{width: 150px; height: 200px;}
+.header .gnb li:first-child .subnav{}
+.header .gnb li:last-child .subnav{}
+
+
+/* li:first-child --> li중에서 첫째 자식
+li:last-child --> li중에서 마지막 자식 
+nth-chil --> li중에서 3번째 자식
+li:nth-child(2n) --> 짝수의 자식
+li:nth-child(even) --> 짝수의 자식
+li:nth-child(2n+1) --> 홀수의 자식
+li:nth-child(odd) --> 홀수의 자식 */
+
+.header .gnb .subnav li{height: 50px; line-height: 50px;}
+.header .gnb .subnav li a{display: block;
+transition: 0.3s;
+}
+
+.header .gnb .subnav li a:hover{
+    background-color: #0b7245;
+    color: #fff;
+}
