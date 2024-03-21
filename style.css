@@ -4,9 +4,15 @@ body{font-family: "Noto Sans KR", sans-serif;}
 
 li{list-style: none;} /* 기호제거 */
 a{text-decoration: none;} /* a태그에 나타나는 밑줄제거 */
-img{width: 100%;}
+img{width: 100%; display: block
+   /*  img태그가 인라인요소이기 때문에 아래에 빈공간이 생길 수 있다
+    해결방법
+    1)display:block;
+    2)vertical-align: top */
+
 /* 인라인요소는 공간에 대한 개념이 없음
 단, img태그와 button태그는 공간을 인식함 */
+}
 
 .clearfix::after{content: ""; clear: both; display: block;}
 
@@ -22,7 +28,9 @@ float: left;
 
 .header .gnb ul{}
 
-.header .gnb ul li{float: left; width: 150px; height: 100px;
+.header .gnb>ul>li{
+    position: relative;
+    float: left; width: 150px; height: 100px;
 text-align: center; line-height: 100px;
 }
 
@@ -38,12 +46,20 @@ background-color: rgba(0,0,0,.4); */
     color: #0b7245; border-bottom: 3px solid #0b7245;
 }
 
-.header .gnb .subnav{width: 150px; height: 200px;}
-.header .gnb li:first-child .subnav{}
-.header .gnb li:last-child .subnav{}
+.header .gnb .subnav{
+    display: none;
+    position: absolute; top: 100px; left: 0;
+    width: 150px; height: 200px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.header .gnb li:first-child .subnav{border-left: 1px solid #ccc;}
+.header .gnb li:last-child .subnav{border-right: 1px solid #ccc;}
 
 
-/* li:first-child --> li중에서 첫째 자식
+/*
+조건) 한부모의 자식들
+li:first-child --> li중에서 첫째 자식
 li:last-child --> li중에서 마지막 자식 
 nth-chil --> li중에서 3번째 자식
 li:nth-child(2n) --> 짝수의 자식
@@ -59,4 +75,34 @@ transition: 0.3s;
 .header .gnb .subnav li a:hover{
     background-color: #0b7245;
     color: #fff;
+}
+
+
+/* mian */
+.main{position: relative; height: 300px; overflow: hidden;}
+.main ul{position: absolute; left: 0; top: 0;
+
+}
+.main ul li{}
+.main ul li a{}
+.main ul li a img{}
+
+/* contents */
+
+.contents{margin: 20px auto;} /* m20-0 */
+.contents>div{float: left; width: 400px; height: 200px;
+    box-sizing: border-box; padding: 5px 20px;
+}
+.contents .banner{}
+.contents .now{}
+.contents .board{padding:0 20px;}
+.contents .board .btn{
+    border-bottom: 1px solid #999;
+}
+.contents .board .btn li{float: left; margin: 0 10px;
+line-height: 49px;
+}
+.contents .board .btn li a{display: block;}
+.contents .board .btn li.active a{color: #0b7245;
+border-bottom: 3px solid #0b7245;
 }
